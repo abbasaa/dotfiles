@@ -1,0 +1,59 @@
+
+# SSH multiplexing
+
+Host caen
+  User abbasaa
+  HostName login.engin.umich.edu
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ControlPersist 43200
+
+# for umich gitlab2
+Host gitlab
+  User git
+  Hostname gitlab.eecs.umich.edu
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/gitlab_keys/id_gitlab2
+
+# for port 443 umich gitlab2
+Host port-gitlab
+  User git
+  Hostname altssh.gitlab.eecs.umich.edu
+  Port 443
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/gitlab_keys/id_gitlab2
+
+# for eecs 201 gitlab
+Host eecs201-gitlab
+  User git
+  Hostname gitlab.umich.edu
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/gitlab_keys/id_eecs201_gitlab
+
+# for umich github
+Host github
+  User git
+  Hostname github.com
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/github_keys/id2_github
+
+# for umich github2
+Host github2
+  User git
+  Hostname github.com
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/github_keys/id_github
+
+# for personal gitlab
+Host personal-gitlab
+  User git
+  Hostname gitlab.com
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/gitlab_keys/id_personal_gitlab
+
+Host dante
+  User abbasaa
+  HostName dante.si.umich.edu
+  ControlMaster auto
+  ControlPath ~/.ssh/master-%r@%h:%p
+  ControlPersist 43200
