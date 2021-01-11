@@ -1,0 +1,110 @@
+Verbs
+
+d: delete
+c: change
+y: yank(copy)
+v: visually select
+
+Modifiers
+
+i: inside
+a: around
+NUM: number (e.g.: 1,2, 10)
+t: searches for that thing and stops before it
+f: searches for that thing and lands on it
+/: find a string (literal or regex)
+
+Nouns
+
+w: word
+s: sentence
+): sentence
+p: paragraph
+}: paragraph
+t: tag (think html/xml)
+b: block (think programming)
+
+ZZ is equivalent to :wq
+:saveas ~/some/path/
+
+Searching
+
+/{stringtosearch}
+?{stringtosearchbackwards}
+n: goes to next instance
+N: goes to previous instance
+
+t: jump to a character
+f: jump onto a character
+;: go to next instance of character
+,: go to previoues instance when you jumped to character
+
+*: search for instances of word under cursor
+
+Examples
+
+f< : jump forward and land on the next < character
+t< : jump forward and land right before the < character
+
+Movement
+
+0: move to beginning of the line
+$: move to the end of the line
+^: move to first non-blank character in the line
+t": jump to right before the next quotes
+f": jump and land on the next quotes
+t): jump to right before the next close parantheses
+f): jump and land on the next close parantheses
+
+Note: , and ; will repeate previous t and f jumps
+
+Movement by Word
+
+w: move forward one word
+b: move back one word
+e: move to the end of your word
+
+W: move forward one big word (i.e. doesn't or can't or comp-word)
+B: move back one big word
+
+Movement by Sentence or Paragraph
+
+): move forward one sentence
+}: move forward one paragraph
+
+Movement within Screen
+
+H: move to top of screen
+M: move to middle of screen
+L: move to the bottom of the screen
+gg: go to top of file
+G: go to bottom of file
+<ctrl>-u: move up half a screen
+<ctrl>-d: move down half a screen
+<ctrl>-f: page down (i.e. F for FORWARD)
+<ctrl>-b: page up (i.e. B for BACK)
+
+Movement Back and Forth
+
+<ctrl>-i: jump to your previous navigation location
+<ctrl>-o: jump back to where you were
+{number}G: jump to given line number
+<ctrl>-e: scroll up one line
+<ctrl>-y: scroll down one line
+
+Insert Options
+
+i: insert before cursor
+a: append after cursor
+I: insert at the beginning of the line
+A: append at the end of the line
+o: open a new line below the current one
+O: open a new line above the current one
+r: replace the one character under your cursor
+R: replace the character under your cursor, but just keep typing
+c{movement}: change whatever you define as a movement, e.g. inner word, inner sentence, or around word, etc.
+C: change current line from where you're at
+ct?: change up to the question mark
+s: substitute from where you are at to the next command (noun)
+S: substitute the entire current line
+
