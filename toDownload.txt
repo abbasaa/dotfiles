@@ -1,0 +1,15 @@
+flux
+firefox
+karabiner elements
+min browser
+notability
+onyx
+postman
+spotify
+vscode
+xcode
+iterm
+bitwarden
+
+homebrew
+neovim

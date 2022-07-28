@@ -1,14 +1,13 @@
 General
 vscode
 postman
-slack
 spotify
 chrome
 git
 wget
 tree
 boost
-quantlib
+-quantlib
 python3
 pip3
 flake8
@@ -22,38 +21,16 @@ gcc
 g++
 gdb / lldb
 tmux
-emacs
 zeromq
-libomp
-rabbitmq
+-libomp
 sftp
 interactive brokers
-jetbrains toolbox
 
 Mac
-xvim
 homebrew
-vimr (neovim gui)
-node
-npm
-heroku
 iterm
-pycharm
-    .ignore
-    BashSupport
-    IdeaVim
-    Node.js
-    One Dark
-    Relative Line Numbers
-    Requirements
-    Xcode-Dark Theme
-clion
 xcode
 karabiner elements
-cisco anyconnect
-microsoft remote desktop
 onyx
 
-Linux
-terminator emulator
 
