@@ -1,0 +1,69 @@
+# .alwaysForget.vim.txt
+#
+# abbasaa's vim cheatsheet
+#
+# Abbas Ahmed abbasaa@umich.edu
+
+leader='
+
+# base
+<C-w> T                           # moves current file to new tab
+<C-w> R                           # rotates panes
+<C-w> ijkl                        # navigates panes
+<C-w> |                           # maxes current file window width
+<C-w> _                           # maxes current file window height
+<C-w> 1|                          # mins current file window width
+<C-w> 1_                          # mins current file window height
+gt                                # navigates to next tab
+#gt                               # navigates to specific tab
+:tabo[nly]                        # close all tabs except current
+:tabc[lose]                       # close current tab
+:tabnew                           # opens new tab
+:vs <filename>                    # vertical split file
+:sp{lit} <filename>               # split file
+gg                                # beginning of file
+G                                 # end of file
+a                                 # insert after cursor
+A                                 # insert at end of line
+i                                 # insert
+I                                 # insert at beginning of line
+f                                 # go to next occurance of character on line
+F                                 # go to next backward occurance of character on line
+t                                 # go to just before next occurance of character on line
+T                                 # got to just before next backward occurance of character on line
+\<num\>>>                         # indents specified number of lines
+sb<num>                           # splits window with specified buffer
+vert sb<num>                      # vertical splits window with specified buffer
+:ball                             # opens all buffers in horizontal split windows
+:bd <num>                         # deletes buffer by number
+:bn                               # switch to next buffer
+:bp                               # switch to previous buffer
+:b<num>                           # switch to buffer by window
+:badd <filename>                  # add files to buffers
+:bfirst                           # switch to first buffer
+:blast                            # switch to last buffer
+
+# command line mode
+<C-r> <C-w>                       # copies words under cursor into command line
+
+# fzf
+:Files                            # searchs for files all directories below your file
+:Ag                               # search inside all files at/below you for keyword
+<C-v>                             # with cursor on file in search, vertical split in new window
+<C-x>                             # with cursor on file in search, horizontal split in new window
+<C-t>                             # with cursor on file in search, opens new tab
+
+# nerdtree
+<C-f>                             # with cursor in file, shows file location in tree
+s                                 # with curson on filename, split file open in new window
+<C-t>                             # toggles nerdtree window
+leader n                          # moves cursor to nerdtree window
+
+# commentary
+<num>gcc                          # comments out <num> lines
+gc                                # comments out target of motion like gcip
+
+# man pages
+<shift>k                          # opens cpp ref page for word under cursor
+:Cppman <class>                   # split right open cpp ref page for class specified
+

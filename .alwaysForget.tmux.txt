@@ -1,0 +1,38 @@
+# .alwaysForget.tmux.txt
+#
+# abbasaa's tmux cheatsheet
+#
+# Abbas Ahmed abbasaa@umich.edu
+
+<C-b>                     # prefix
+
+# pane management
+prefix ;                  # toggle last active pane
+prefix o                  # switch to last pane
+prefix %                  # split pane with horizontal layout
+prefix "                  # split pane with vertical layout
+prefix q                  # show pane numbers
+prefix q <num>            # switch to pane <num>
+prefix x                  # close current pane
+prefix !                  # convert pane into window
+prefix {                  # move current pane left
+prefix }                  # move current pane right
+
+# window management
+prefix p                  # switch to prev window
+prefix n                  # switch to next window
+prefix <num>              # switch to window <num>
+prefix ,                  # rename current window
+prefix &                  # close current window
+prefix c                  # create window
+
+# session management
+tmux ls                   # list sessions
+tmux a -t <num>           # attach session <num>
+tmux a                    # attach last session
+prefix d                  # detach current session
+prefix $                  # rename session
+prefix (                  # move to previous session
+prefix )                  # move to next session
+
+
