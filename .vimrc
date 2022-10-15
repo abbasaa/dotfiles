@@ -30,6 +30,40 @@ set expandtab     " expand TABs to be spaces
 set cursorline " highlights current line
 "set cursorcolumn " highlights current column
 
+" Enumerate tabs
+fu! MyTabLabel(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  let string = fnamemodify(bufname(buflist[winnr - 1]), ':t')
+  return empty(string) ? '[unnamed]' : string
+endfu
+
+fu! MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    " select the highlighting
+    if i + 1 == tabpagenr()
+      let s .= '%#TabLineSel#'
+    else
+      let s .= '%#TabLine#'
+    endif
+
+    " set the tab page number (for mouse clicks)
+    " let s .= '%' . (i+1) . 'T'
+    " display tabnumber (for use with <count>gt, etc)
+    let s .= ' '. (i+1) . ' '
+
+    " the label is made by MyTabLabel()
+    let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
+
+    if i+1 < tabpagenr('$')
+      let s .= ' |'
+    endif
+  endfor
+return s
+endfu
+set tabline=%!MyTabLine()
+
 " Vim-Plug
 call plug#begin()
 
@@ -51,11 +85,12 @@ Plug 'bfrg/vim-cpp-modern'
 Plug 'nvie/vim-flake8'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'gauteh/vim-cppman'
 " Plug 'scrooloose/syntastic' slows downs loading immensely
 
 call plug#end()
 
-colorscheme xcodedark " set color theme
+" colorscheme xcodedark " set color theme
 
 " Signify Config
 " set updatetime=100 " default update time 4000ms not good for async update
